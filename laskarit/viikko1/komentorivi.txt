@@ -1,0 +1,7 @@
+ot-harjoitustyo
+├── README.md
+└── laskarit
+    └── viikko1
+        └── komentorivi.txt
+
+2 directories, 2 files
