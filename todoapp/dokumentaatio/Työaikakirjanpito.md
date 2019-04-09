@@ -1,3 +1,3 @@
 # Vaatimusmäärittelyn teko
 
-* Alustavan vaatimusmäärittelyn tekoon meni noin 1.5 tuntia
+* Alustavan vaatimusmäärittelyn teko 13:00 - 14:18 9.4.2019
