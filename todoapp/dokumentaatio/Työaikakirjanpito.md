@@ -1,3 +1,5 @@
 # Vaatimusmäärittelyn teko
 
-* Alustavan vaatimusmäärittelyn teko 13:00 - 14:18 9.4.2019
+| päivä | aika | mitä tein  |
+| :----:|:-----| :-----|
+| 9.4. | 1.5    | Dokumentaation tekoa |
