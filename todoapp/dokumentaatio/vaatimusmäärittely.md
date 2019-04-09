@@ -9,6 +9,6 @@ Sovelluksessa luultavasti tulee olemaan vain normaali käyttäjä.
 Sovelluksessa on noin 4 näkymää.
 
 ![]
-(https://github.com/Muisku/ot-harjoitustyo/blob/master/todoapp/kuvat/IMG_0811.jpg)
+(https://github.com/Muisku/ot-harjoitustyo/blob/master/todoapp/kuvat/kayttoliittyma_kuvaus.png)
 
 Sovelluksessa ensimmäisenä aukeaa näkymä jossa voidaan suoraan kirjautua tai luoda uusi käyttäjä. Jos päätetään luoda uusi käyttäjä päästään näkymään jossa pyydetään yksinkertaisesti nimeä ja voidaan luoda käyttäjä painamalla create nappia.
