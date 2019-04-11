@@ -5,10 +5,22 @@
  */
 package takeyourtime.database;
 
-import java.util.*;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
 import takeyourtime.domain.User;
+
+/**
+ *
+ * @author muisku
+ */
 public class UserDao implements Dao<User, Integer> {
+    
+    private Database database;
+    
+    public DrinkkiDao(Database database) {
+        this.database = database;
+    }
 
     @Override
     public User findOne(Integer key) throws SQLException {
@@ -28,6 +40,11 @@ public class UserDao implements Dao<User, Integer> {
     @Override
     public void delete(Integer key) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public User save(User user) throws SQLException {
+        
+        Connection conn = database.getConnection();
     }
     
 }
