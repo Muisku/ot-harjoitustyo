@@ -11,4 +11,6 @@ Take your time sovelluksella selvität mihin tuhlaat aikasi!
 
 [Testausdokumentti](https://github.com/Muisku/ot-harjoitustyo/blob/master/todoapp/dokumentaatio/Testausdokumentti.md)
 
+[Release](https://github.com/Muisku/ot-harjoitustyo/releases)
+
 [Työaikakirjanpito](https://github.com/Muisku/ot-harjoitustyo/blob/master/todoapp/dokumentaatio/Ty%C3%B6aikakirjanpito.md)
