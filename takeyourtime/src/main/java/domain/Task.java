@@ -11,12 +11,30 @@ package domain;
  */
 public class Task {
     
-     Integer id;
-     String task;
+     int id;
+     String taskName;
+     public User user;
      
-     public Task(Integer id, String task) {
+     public Task(int id, String taskName, User user) {
+     
          this.id = id;
-         this.task = task;
+         this.taskName = taskName;
+     
      }
+     public Task(String taskName, User user) {
+        
+         this.taskName = taskName;
+         this.user = user;
+     
+     }
+     
+    public String getTaskName() {
+        return taskName;
+    }
+ 
+
+    public User getUser() {
+        return user;
+    }
 
 }

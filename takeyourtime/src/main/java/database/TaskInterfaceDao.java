@@ -4,11 +4,21 @@
  * and open the template in the editor.
  */
 package database;
+
+import java.sql.SQLException;
 import java.sql.*;
 import java.util.*;
-public interface Dao<T, K> {
-    T findOne(K key) throws SQLException;
-    List<T> findAll() throws SQLException;
-    T saveOrUpdate(T object) throws SQLException;
+
+/**
+ *
+ * @author muisku
+ */
+public interface TaskInterfaceDao<T, K> {
+    
     void delete(K key) throws SQLException;
+    
+    T saveOrUpdate(T object) throws SQLException;
+    
+    T findOne(K key) throws SQLException;
+    
 }

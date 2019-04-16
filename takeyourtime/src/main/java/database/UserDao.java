@@ -6,6 +6,9 @@
 package database;
 
 import domain.User;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -13,7 +16,7 @@ import java.util.List;
  *
  * @author muisku
  */
-public class UserDao implements Dao<User, Integer> {
+public class UserDao implements UserInterfaceDao<User, String> {
     
      private Database database;
 
@@ -22,8 +25,25 @@ public class UserDao implements Dao<User, Integer> {
     }
 
     @Override
-    public User findOne(Integer key) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public User findOne(String key) throws SQLException {
+        Connection conn = database.getConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM User WHERE username = ?");
+        stmt.setString(1, key);
+        
+        ResultSet rs = stmt.executeQuery();
+        boolean findOne = rs.next();
+       
+        if (!findOne) {
+            return null;
+        }
+        
+        User user = new User(rs.getString("name"), rs.getString("username"));
+        
+        stmt.close();
+        rs.close();
+        conn.close();
+        
+        return user;
     }
 
     @Override
@@ -32,12 +52,25 @@ public class UserDao implements Dao<User, Integer> {
     }
 
     @Override
-    public User saveOrUpdate(User object) throws SQLException {
+    public boolean saveOrUpdate(User object) throws SQLException {
+       Connection connection = database.getConnection();
+       
+       PreparedStatement stmt = connection.prepareStatement("INSERT INTO User(username, name) VALUES(?, ?)");
+       
+       stmt.setString(1, object.getUsername());
+       stmt.setString(1, object.getName());
+       
+       stmt.executeUpdate();
+       stmt.close();
+       return true;
+    }
+
+    public void delete(Integer key) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void delete(Integer key) throws SQLException {
+    public void delete(String key) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

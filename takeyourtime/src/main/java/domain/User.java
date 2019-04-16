@@ -11,11 +11,25 @@ package domain;
  */
 public class User {
     
-    Integer id;
-    String nimi;
     
-    public User(Integer id, String nimi) {
-        this.id = id;
-        this.nimi = nimi;
+    String name;
+    String username;
+    
+    public User(String name, String username) {
+      
+        this.name = name;
+        this.username = username;
+        
+    }
+    
+    public String getUsername() {
+        
+        return username;
+        
+    }
+    public String getName() {
+        
+        return name;
+        
     }
 }
