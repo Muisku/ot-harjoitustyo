@@ -8,7 +8,5 @@
 | 12.4. | 1.5  | Koodaamista |
 | 15.4. | 4    | Koodaamista |
 | 16.4. | 8    | Koodaamista |
-
-| total:| 18h  |
-| :----:|:-----| :-----|
+| total | 18   | kaikki |
 
