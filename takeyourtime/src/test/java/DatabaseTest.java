@@ -42,12 +42,23 @@ public class DatabaseTest {
     
     @After
     public void tearDown() throws SQLException {
-   
+        Connection connection = test.getConnection();
+        PreparedStatement stmt = connection.prepareStatement("DROP TABLE Task");
+        
+        stmt.executeUpdate();
+        stmt.close();
+        connection.close();
+        
+        connection = test.getConnection();
+        stmt = connection.prepareStatement("DROP TABLE User");
+        stmt.executeUpdate();
+        stmt.close();
+        connection.close();
+                
+    }
+    @Test
+    public void initreturn() {
+        assertEquals(true, test.init());
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }

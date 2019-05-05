@@ -23,6 +23,11 @@ public class Database {
         return DriverManager.getConnection(databaseAdress);
     }
     
+    /**
+     * Init metodi luo tietokantataulut
+     * 
+     * @return palauttaa true jos onnistutaan luomaan tietokantataulut
+     */
     public boolean init() {
         List<String>create_tables = createdbTables();
         
@@ -39,7 +44,11 @@ public class Database {
         }
         return true;
     }
-    
+     /**
+     * Palauttaa lauseet jotka palauttavat tietokantataulut 
+     * 
+     * @return listan joka pitää sisällään tietokantataulujen luontilauseet
+     */
     public List<String> createdbTables() {
         ArrayList<String> tables = new ArrayList<>();
         tables.add("CREATE TABLE IF NOT EXISTS User (username varchar (10) PRIMARY KEY, name varchar(20));");

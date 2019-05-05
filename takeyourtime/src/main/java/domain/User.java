@@ -6,30 +6,29 @@
 package domain;
 
 /**
- *
- * @author muisku
+ * Järjestelmän käyttäjää edustava luokka
  */
 public class User {
-    
-    
+
     String name;
     String username;
-    
+
     public User(String name, String username) {
-      
+
         this.name = name;
         this.username = username;
-        
+
     }
-    
+
     public String getUsername() {
-        
+
         return username;
-        
+
     }
+
     public String getName() {
-        
+
         return name;
-        
+
     }
 }

@@ -6,8 +6,7 @@
 package domain;
 
 /**
- *
- * @author muisku
+ * Tehtävää edustava luokka
  */
 public class Task {
     
@@ -21,6 +20,8 @@ public class Task {
          this.taskName = taskName;
      
      }
+     
+     
      public Task(String taskName, User user) {
         
          this.taskName = taskName;
