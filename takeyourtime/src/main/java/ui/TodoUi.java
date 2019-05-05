@@ -83,7 +83,7 @@ public class TodoUi extends Application {
         stage.setScene(loginscene);
         stage.show();
 
-        // login button
+     
         login.setOnAction(e -> {
             String username = giveusername.getText();
 
@@ -109,6 +109,9 @@ public class TodoUi extends Application {
 
     }
 
+    
+
+    
     public void userCreateView(Stage stage) {
         TextField givenewusername = new TextField();
         TextField givename = new TextField();
@@ -150,7 +153,7 @@ public class TodoUi extends Application {
        
 
         createtodocomponents.getChildren().addAll(todo, createtodo, contscroll, logout);
-        todopage.setTop(createtodocomponents);
+       
         todoscene = new Scene(todopage, 200, 200);
 
         createtodo.setOnAction(e -> {
