@@ -5,7 +5,7 @@ Take your time sovelluksella selvität mihin tuhlaat aikasi!
 ## Dokumentaatio
 [Vaatimusmäärittely](https://github.com/Muisku/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)
 
-[Arkkitehtuurikuvaus](https://github.com/Muisku/ot-harjoitustyo/blob/master/dokumentaatio/sequence.png)
+[Arkkitehtuurikuvaus](https://github.com/Muisku/ot-harjoitustyo/blob/master/dokumentaatio/Arkkitehtuurikuvaus.md)
 
 [Käyttöohje](https://github.com/Muisku/ot-harjoitustyo/blob/master/dokumentaatio/K%C3%A4ytt%C3%B6ohje.md)
 
