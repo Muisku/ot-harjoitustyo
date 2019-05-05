@@ -21,4 +21,6 @@ public interface TaskInterfaceDao<T, K> {
     
     T findOne(K key) throws SQLException;
     
+    List<T> findAll(K key) throws SQLException;
+    
 }

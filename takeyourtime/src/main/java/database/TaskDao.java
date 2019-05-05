@@ -85,7 +85,27 @@ public class TaskDao implements TaskInterfaceDao<Task, String> {
        
     }
 
+    @Override
+    public List<Task> findAll(String key) throws SQLException {
+        List<Task> tasks = new ArrayList<>();
+        Connection connection = database.getConnection();
+        
+        PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Task WHERE user_username = ?");
+        stmt.setObject(1, key);
+        ResultSet rs = stmt.executeQuery();
+        
+        while (rs.next()) {
+            Task task = new Task(rs.getString("taskName"));
+            tasks.add(task);
+        }
+        stmt.close();
+        rs.close();
+        connection.close();
+        return tasks;
+    }    
+}
+
 
 
     
-}
+

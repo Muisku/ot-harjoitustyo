@@ -10,6 +10,8 @@ import database.TaskInterfaceDao;
 import database.UserDao;
 import java.sql.SQLException;
 import database.UserInterfaceDao;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -42,6 +44,13 @@ public class TimeService {
         taskdao.saveOrUpdate(task);
         
         return true;
+    }
+    
+    public List<Task> getTasks() throws SQLException {
+       if (logger == null) {
+           return new ArrayList<>();
+       }
+        return taskdao.findAll(logger.getUsername());
     }
     
     public boolean createUser(String username, String name) throws SQLException {
