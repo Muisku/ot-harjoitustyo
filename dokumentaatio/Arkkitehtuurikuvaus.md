@@ -1,12 +1,11 @@
 ## Arkkitehtuurikuvaus
 
-#Kuvaus
 
 Ohjelman rakenne muodostuu kolmesta ryhmästä:
 
 <img src="https://github.com/Muisku/ot-harjoitustyo/blob/master/kuvat/arkkitehtuuri.png" width="160">
 
-ui sisältää käyttöliittymän, sovelluslogiikasta pitää huolen domain ja database hoitaa tietojen viemisen ja tuomisen tietokannasta.
+Ui sisältää käyttöliittymän, sovelluslogiikasta pitää huolen domain ja database hoitaa tietojen viemisen ja tuomisen tietokannasta.
 
 ## Käyttöliittymä
 
